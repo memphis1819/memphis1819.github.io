@@ -1686,7 +1686,7 @@ html.transition *::after {
 }
 
 .social__link_descr {
-  font-size: var(--font-size-regular);
+  font-size: var(--font-size-small);
 }
 
 .social__link_descr:hover {
