@@ -472,8 +472,8 @@ body {
   display: grid;
   grid-template-columns: [container-start] 1fr [center-start] repeat(6, [col-start] minmax(-webkit-min-content, 16.66667rem) [col-end]) [center-end] 1fr [container-end];
   grid-template-columns: [container-start] 1fr [center-start] repeat(6, [col-start] minmax(min-content, 16.66667rem) [col-end]) [center-end] 1fr [container-end];
-  grid-template-rows: repeat(9, -webkit-min-content);
-  grid-template-rows: repeat(9, min-content);
+  grid-template-rows: repeat(6, -webkit-min-content);
+  grid-template-rows: repeat(6, min-content);
   /* Медиазапрос для экрана tablet (max-width: 767px) */
 }
 
@@ -1798,7 +1798,24 @@ html.transition *::after {
     grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
   }
 
-  .social__wrapper {
+  .social__items {
     grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+  }
+
+  .social__link {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .social__link_img {
+    padding-right: 0;
+  }
+
+  .social__link_img svg {
+    height: 4rem;
+    width: 4rem;
+    fill: var(--color-fourth);
   }
 }
